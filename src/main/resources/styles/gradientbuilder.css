@@ -1,0 +1,187 @@
+
+.root{
+	GB_scrollbar-track: derive(-fx-color, 27.5%);
+    GB_scrollbar-thumb: derive(-fx-color, -26.3%);
+    GB_scrollbar-corner-border: derive(GB_scrollbar-track, -10%);
+}
+
+.app-header{
+	-fx-background-color: #616161;
+	-fx-background-image:url("../images/background.png");
+	-fx-background-repeat:no-repeat;
+	-fx-opacity:.8;
+	-fx-border-width: 0 0 2px 0;
+	-fx-border-color: #969696;
+	-fx-alignment: TOP_LEFT;
+}
+
+.app-header-text{
+	-fx-fill: red;
+	-fx-font-size:40;
+	-fx-stroke: beige;
+    -fx-stroke-width: 1.3;
+}
+
+.app-footer{
+	-fx-background-color: #616161;
+	-fx-opacity:.8;
+	-fx-border-width: 2px 0 0 0;
+	-fx-border-color: #969696;
+	-fx-alignment: CENTER;
+}
+
+.app-footer-text{
+	-fx-text-fill: beige;
+	-fx-font-size:12;
+}
+
+.scroll-bar {
+    -fx-background-color: -fx-outer-border, GB_scrollbar-track;
+    -fx-background-insets: 0,1;
+}
+
+.scroll-bar .track {
+    -fx-background-color: null;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: GB_scrollbar-thumb;
+    -fx-background-insets: 3;
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar:horizontal .increment-button , .scroll-bar:horizontal .decrement-button{
+    -fx-background-color: null;
+    -fx-padding: 6 0 6 0;
+}
+
+.scroll-bar:vertical .increment-button , .scroll-bar:vertical .decrement-button{
+    -fx-background-color: null;
+    -fx-padding: 0 6 0 6;
+}
+
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+    -fx-background-color: null;
+    -fx-padding: 0;
+}
+
+.corner {
+    -fx-background-color:   GB_scrollbar-corner-border,   GB_scrollbar-track;
+    -fx-background-insets: 0,1 0 0 1;
+}
+
+.scroll-pane{
+	-fx-background-color:transparent;
+	-fx-background-insets:0;
+}
+
+.scroll-pane > * > .scroll-bar:horizontal {
+    -fx-background-insets: 0,1 0 0 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane > * > .scroll-bar:horizontal .increment-button ,.scroll-pane > * > .scroll-bar:horizontal .decrement-button{
+    -fx-background-color: null;
+    -fx-padding: 6 0 5 0;
+}
+
+.scroll-pane > * > .scroll-bar:horizontal .thumb {
+    -fx-background-insets: 3 3 2 3;
+}
+
+.scroll-pane > * > .scroll-bar:vertical {
+    -fx-background-insets: 0, 0 0 0 1;
+    -fx-padding: 0;
+}
+
+.scroll-pane > * > .scroll-bar:vertical .increment-button ,.scroll-pane > * > .scroll-bar:vertical .decrement-button{
+    -fx-background-color: null;
+    -fx-padding: 0 5 0 6;
+}
+
+.scroll-pane > * > .scroll-bar:vertical .thumb {
+    -fx-background-insets: 3 2 3 3;
+}
+
+.split-pane{
+	-fx-background-color:transparent;
+	-fx-background-insets:0;
+	-fx-padding: 0;
+}
+
+.custom-radio-btn, .custom-radio-btn:focused{
+	-fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-cursor:hand;
+    -fx-text-fill: #333333;
+    -fx-font-size:16;
+    -fx-font-family:verdana;
+    
+}
+
+.circle-shape{
+	-fx-shape: "M 100, 100  m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"; /* Ref : http://www.w3.org/TR/SVG/paths.html, http://stackoverflow.com/questions/5737975/circle-drawing-with-svgs-arc-path */
+}
+
+.radio-selected-c1{
+	-fx-fill: linear-gradient(to bottom, #61627A, #C4C6D0);
+}
+
+.radio-selected-c2{
+	-fx-fill: linear-gradient(to bottom, #9A9CB4, #F3F3F3);
+}
+
+.radio-selected-c3{
+	-fx-fill: radial-gradient(focus-angle 242deg , focus-distance 39% , center 50% 50% , radius 61% , reflect, #f0f8ff, #79d362, #5AA84b);
+	-fx-stroke-width:1px;
+	-fx-stroke:#7a7b8f;
+}
+
+.radio-unselected-c1{
+	-fx-fill: linear-gradient(to bottom, #C4C6D0, #61627A);
+}
+
+.radio-unselected-c2{
+	-fx-fill: linear-gradient(to bottom, #F3F3F3, #9A9CB4);
+}
+
+.radio-unselected-c3{
+	-fx-fill: #c1c1c1;
+	-fx-stroke-width:1px;
+	-fx-stroke:#7a7b8f;
+}
+
+.colorInfo-box{
+	-fx-background-radius: 0px 0px 3px 3px;
+}
+
+.color-palatte-popup{
+	-fx-background-color: black; 
+	-fx-font-size: 16;
+	-fx-background-radius: 0px 0px 3px 3px;
+    -fx-effect: dropshadow( three-pass-box  , rgba(0,0,0,0.6) , 12, 0.4 , 0 , 0 );
+}
+
+.transparentButton, .transparentButton:focused{
+	-fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding:2px 2px 2px 2px; 
+}
+
+.heading1{
+	-fx-font-size: 15;
+	-fx-font-family: 'Comic Sans MS';
+	-fx-font-weight:bold;
+	-fx-text-fill:#b22222;
+}
+.builder-scroll-pane{
+-fx-background-color: linear-gradient(to bottom, #f0f8ff, #ffe4b5);
+}
+
+.add-button{
+	-fx-graphic:url("../images/add.png");
+}
+.delete-button{
+	-fx-graphic:url("../images/delete.png");
+}
