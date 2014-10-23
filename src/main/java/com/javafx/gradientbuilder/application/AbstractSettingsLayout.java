@@ -13,6 +13,8 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -220,6 +222,28 @@ public abstract class AbstractSettingsLayout extends StackPane {
 				((HBox) node).getChildren().get(3).setDisable(true);
 			}
 		}
+	}
+	
+	/**
+	 * Configures the settings layout.
+	 */
+	protected void configure() {
+		/* Output Heading*/
+		Label outputHeading = new Label("Syntax Output :");
+		outputHeading.getStyleClass().add("heading1");
+		
+		/* Output TextArea*/
+		TextArea textArea = new TextArea();
+		textArea.prefHeight(100);
+		textArea.minHeight(60);
+		textArea.setWrapText(true);
+		textArea.textProperty().bind(gradientSyntax);
+		layout.getChildren().addAll(outputHeading, textArea);
+		
+		/* Settings Heading*/
+		Label settingsHeading = new Label("Settings :");
+		settingsHeading.getStyleClass().add("heading1");
+		layout.getChildren().addAll(settingsHeading, this.grid);
 	}
 
 }
